@@ -1,9 +1,9 @@
 export default async function handler(req, res) {
   const { filePath, updatedCode } = req.body;
 
-  const shop = 'YOUR_SHOP_NAME.myshopify.com'; // ← ここを変更
-  const accessToken = 'YOUR_ADMIN_API_ACCESS_TOKEN'; // ← ここを変更
-  const themeId = 'YOUR_THEME_ID'; // ← ここを変更（数字のみ）
+  const shop = process.env.SHOP_DOMAIN;
+  const accessToken = process.env.SHOPIFY_API_KEY;
+  const themeId = process.env.THEME_ID;
 
   try {
     const response = await fetch(
