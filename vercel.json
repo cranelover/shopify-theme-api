@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "api/update-theme.js", "use": "@vercel/node" }
+  ],
+  "routes": [
+    { "src": "/api/update-theme", "dest": "api/update-theme.js" }
+  ]
+}
